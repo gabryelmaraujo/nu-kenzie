@@ -10,7 +10,7 @@ const DashBoardPage = () =>{
 
         <div className="dashBoardPage">
             <header className="dbHeader">
-                <nav className="dvNav">
+                <nav className="dbNav">
                     <div className="navLogo">
                         <img src={kenzieBlackLogo} alt="" />
                     </div>
