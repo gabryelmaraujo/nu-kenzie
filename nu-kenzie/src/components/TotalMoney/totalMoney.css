@@ -1,0 +1,36 @@
+.totalBalanceHeader{
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+}
+
+.totalBalanceText{
+    font-family: 'Nunito';
+    font-style: normal;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.totalBalance{
+    font-family: 'Nunito';
+    font-style: normal;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+
+    color: #FD377E;
+}
+
+.totalBalanceDesc{
+    font-family: 'Nunito';
+    font-style: normal;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+
+    color: #343A40;
+}
