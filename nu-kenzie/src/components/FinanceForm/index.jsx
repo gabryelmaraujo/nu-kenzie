@@ -45,7 +45,7 @@ const AddValueForm = ({listTransactions, setListTransactions, addFinance}) => {
             <input type="number" 
               id="valueInput" 
               onChange={(event)=>{
-                setFormData({...formData, value: event.target.value})
+                setFormData({...formData, value: parseInt(event.target.value)})
               }}
               value={formData.value}
               required

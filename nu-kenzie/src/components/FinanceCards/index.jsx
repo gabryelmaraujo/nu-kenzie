@@ -6,12 +6,12 @@ import itemDeleteImg from "../../images/trash.svg"
 
 
 
-const EntryCard = ({financeInfos}) => {
+const EntryCard = ({financeInfos, removeFinance}) => {
 
   const {description, type, value} = financeInfos
 
   return (
-    <li className="entrada" id="salario">
+    <li className="entrada" id={description}>
       <div className="itemDescDiv">
         <p className="itemName">{description}</p>
         <p className="itemType">Entrada</p>
@@ -20,7 +20,8 @@ const EntryCard = ({financeInfos}) => {
         <p className="itemValue">R$ {value}</p>
       </div>
       <div className="itemButtonsDiv">
-        <button id="deleteItem">
+        <button id="deleteItem" onClick={()=> removeFinance(description)
+        }>
           <img src={itemDeleteImg} alt="" className="deleteItemImg" />
         </button>
       </div>
@@ -28,12 +29,12 @@ const EntryCard = ({financeInfos}) => {
   );
 };
 
-const ExitCard = ({financeInfos}) => {
+const ExitCard = ({financeInfos, removeFinance}) => {
 
   const {description, type, value} = financeInfos
 
   return (
-    <li className="saida" id="salario">
+    <li className="saida" id={description}>
       <div className="itemDescDiv">
         <p className="itemName">{description}</p>
         <p className="itemType">Saída</p>
@@ -42,7 +43,8 @@ const ExitCard = ({financeInfos}) => {
         <p className="itemValue">R$ {value}</p>
       </div>
       <div className="itemButtonsDiv">
-        <button id="deleteItem">
+        <button id="deleteItem" onClick={()=> removeFinance(description)
+        }>
           <img src={itemDeleteImg} alt="" className="deleteItemImg" />
         </button>
       </div>
