@@ -1,0 +1,65 @@
+.entrada{
+    height: 87px;
+    padding: 0 10px;
+
+    display: flex;
+    justify-content: space-between;
+
+    border: 1px solid #F8F9FA;
+    border-radius: 4px;
+    border-left: 4px solid #03B898;
+
+    background-color: #F8F9FA;
+}
+
+.itemDescDiv{
+    width: 21.063rem;
+}
+
+.itemName{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    color: #212529;
+
+    margin-bottom: 0;
+}
+
+.itemType{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+
+    margin-top: 0;
+
+    color: #343A40;
+}
+
+.itemValue{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    color: #212529;
+}
+
+.itemButtonsDiv{
+    padding: 14px 0;
+}
+
+#deleteItem{
+    border: none;
+}
+
+.saida{
+    height: 87px;
+    padding: 0 10px;
+
+    display: flex;
+    justify-content: space-between;
+
+    border: 1px solid #F8F9FA;
+    border-radius: 4px;
+    border-left: 4px solid #E9ECEF;
+
+    background-color: #F8F9FA;
+}
