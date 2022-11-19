@@ -11,7 +11,9 @@ import { financesData } from './data/financesData';
 
 function App() {
 
-  const [listTransactions, setListTransactions] = useState(financesData)
+const [page, setPage] = useState("home")
+
+const [listTransactions, setListTransactions] = useState(financesData)
 
 
 function addFinance(financesData){
@@ -48,9 +50,15 @@ function allMoney(){
 }
 
   return (
+
     <div className="main">
-      {/* <HomePage/> */}
-      <DashBoardPage listTransactions={listTransactions} setListTransactions={setListTransactions} addFinance={addFinance} removeFinance={removeFinance} allMoney={allMoney}/>
+
+    {page === "home" ? (
+          <HomePage setPage={setPage}/>
+        ):(
+          <DashBoardPage listTransactions={listTransactions} setListTransactions={setListTransactions} addFinance={addFinance} removeFinance={removeFinance} allMoney={allMoney} setPage={setPage}/>
+        )}
+
     </div>
   );
 }

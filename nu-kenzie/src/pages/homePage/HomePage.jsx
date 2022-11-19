@@ -4,7 +4,7 @@ import kenzieLogo from "../../images/NuKenzieLogo.svg"
 import kenzieBanner from "../../images/nuKenzieBanner.png"
 
 
-const HomePage = () => {
+const HomePage = ({setPage}) => {
 
     return(
         <main className="homePageMain">
@@ -22,7 +22,7 @@ const HomePage = () => {
               </p>
             </div>
             <div className="initButtonDiv">
-              <button id="initButton">Iniciar</button>
+              <button id="initButton" onClick={()=>setPage("dash")}>Iniciar</button>
             </div>
           </section>
   

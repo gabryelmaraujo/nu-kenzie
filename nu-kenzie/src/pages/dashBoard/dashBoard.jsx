@@ -9,7 +9,7 @@ import ListsHeader from "../../components/ListsHeader"
 import HaveNoValues from "../../components/HaveNoValues"
 import FinanceList from "../../components/FinanceList"
 
-const DashBoardPage = ({listTransactions, setListTransactions, addFinance, removeFinance, allMoney}) =>{
+const DashBoardPage = ({listTransactions, setListTransactions, addFinance, removeFinance, allMoney, setPage}) =>{
 
     const verifyListLength = () => {
         if(listTransactions.length === 0){
@@ -22,7 +22,7 @@ const DashBoardPage = ({listTransactions, setListTransactions, addFinance, remov
     return (
 
         <div className="dashBoardPage">
-            <Header/>
+            <Header setPage={setPage}/>
 
             <main className="dbMain">
                 <div className="dbMainContainer">
