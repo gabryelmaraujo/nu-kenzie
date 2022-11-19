@@ -9,7 +9,15 @@ import ListsHeader from "../../components/ListsHeader"
 import HaveNoValues from "../../components/HaveNoValues"
 import FinanceList from "../../components/FinanceList"
 
-const DashBoardPage = () =>{
+const DashBoardPage = ({listTransactions, setListTransactions, addFinance}) =>{
+
+    const verifyListLength = () => {
+        if(listTransactions.length === 0){
+            <HaveNoValues/>
+        }else{
+            <FinanceList listTransactions={listTransactions} setListTransactions={setListTransactions}/>
+        }
+    }
 
     return (
 
@@ -21,7 +29,7 @@ const DashBoardPage = () =>{
                     <section className="dbFormSec">
 
                         <div className="dbFormDiv">
-                            <AddValueForm/>
+                            <AddValueForm listTransactions={listTransactions} setListTransactions={setListTransactions} addFinance={addFinance}/>
                         </div>
 
                         <TotalMoney/>
@@ -30,10 +38,10 @@ const DashBoardPage = () =>{
 
                     <section className="dbListSec">
                         <ListsHeader/>
-
+                        
                         {/* <HaveNoValues/> */}
-
-                        <FinanceList/>
+                        
+                        <FinanceList listTransactions={listTransactions} setListTransactions={setListTransactions}/>
 
                     </section>
                 </div>

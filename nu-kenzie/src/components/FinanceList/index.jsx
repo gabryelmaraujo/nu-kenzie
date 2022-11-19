@@ -1,21 +1,24 @@
 
 import React from "react"
 
-import { EntryCard, ExitCard } from "../FinanceCards"
+import { EntryCard, ExitCard} from "../FinanceCards"
 
 import "./financeList.css"
 
 
-const FinanceList = () => {
+const FinanceList = ({listTransactions}) => {
 
 return (
     <ul className="dbList">
-        <EntryCard/>
-        <ExitCard/>
-        <EntryCard/>
-        <ExitCard/>
-        <EntryCard/>
-        <ExitCard/>
+        {
+            listTransactions.map((finances, index) => {
+                if(finances.type === "entrada"){
+                    return <EntryCard key={index} financeInfos={finances}/>
+                }else if(finances.type === "saida"){
+                    return <ExitCard key={index} financeInfos={finances}/>
+                }
+            })
+        }
     </ul>
 )
 

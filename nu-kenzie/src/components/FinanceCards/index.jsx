@@ -6,15 +6,18 @@ import itemDeleteImg from "../../images/trash.svg"
 
 
 
-const EntryCard = () => {
+const EntryCard = ({financeInfos}) => {
+
+  const {description, type, value} = financeInfos
+
   return (
     <li className="entrada" id="salario">
       <div className="itemDescDiv">
-        <p className="itemName">Salário - Mês Dezembro</p>
+        <p className="itemName">{description}</p>
         <p className="itemType">Entrada</p>
       </div>
       <div className="itemValueDiv">
-        <p className="itemValue">R$ 6.660,00</p>
+        <p className="itemValue">R$ {value}</p>
       </div>
       <div className="itemButtonsDiv">
         <button id="deleteItem">
@@ -25,15 +28,18 @@ const EntryCard = () => {
   );
 };
 
-const ExitCard = () => {
+const ExitCard = ({financeInfos}) => {
+
+  const {description, type, value} = financeInfos
+
   return (
     <li className="saida" id="salario">
       <div className="itemDescDiv">
-        <p className="itemName">Salário - Mês Dezembro</p>
-        <p className="itemType">Entrada</p>
+        <p className="itemName">{description}</p>
+        <p className="itemType">Saída</p>
       </div>
       <div className="itemValueDiv">
-        <p className="itemValue">R$ 6.660,00</p>
+        <p className="itemValue">R$ {value}</p>
       </div>
       <div className="itemButtonsDiv">
         <button id="deleteItem">

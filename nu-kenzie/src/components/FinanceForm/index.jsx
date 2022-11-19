@@ -1,16 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./form.css"
 
 
-const AddValueForm = () => {
+const AddValueForm = ({listTransactions, setListTransactions, addFinance}) => {
+
+  const [formData, setFormData] = useState({
+    description: "",
+    value: "",
+    type: ""
+  })
+
+  const submitFinance = (event) => {
+    event.preventDefault()
+    addFinance(formData)
+    setFormData({
+      description: "",
+      type: "",
+      value: ""
+    })
+  }
+
   return (
-    <form id="dbForm">
+    <form id="dbForm"  onSubmit={submitFinance}>
+
       <label htmlFor="descriptionInput">Descrição</label>
       <input
         type="text"
         id="descriptionInput"
         placeholder="Digite aqui sua descrição"
+        onChange={(event)=>{
+          setFormData({...formData, description: event.target.value})
+        }
+      }
+        value={formData.description}
+        required
       />
       <p className="descriptionExample">Ex: Compra de roupas</p>
 
@@ -18,7 +42,14 @@ const AddValueForm = () => {
         <div className="valueInputDiv">
           <label htmlFor="valueInput">Valor</label>
           <div className="valueInputDetails">
-            <input type="text" id="valueInput" />
+            <input type="number" 
+              id="valueInput" 
+              onChange={(event)=>{
+                setFormData({...formData, value: event.target.value})
+              }}
+              value={formData.value}
+              required
+            />
             <div className="currencyDiv">
               <span>R$</span>
             </div>
@@ -27,14 +58,23 @@ const AddValueForm = () => {
 
         <div className="valueTypeDiv">
           <label htmlFor="valueType">Tipo de Valor</label>
-          <select name="" id="valueType">
-            <option value="entry">Entrada</option>
-            <option value="exit">Saída</option>
+          <select 
+            name="" 
+            id="valueType" 
+            onChange={(event)=>{
+                setFormData({...formData, type: event.target.value})
+              }}
+            value={formData.type}
+            required
+            >
+            <option value ="" disabled selected>Selecione o tipo</option>
+            <option value="entrada">Entrada</option>
+            <option value="saida">Saída</option>
           </select>
         </div>
       </div>
 
-      <button id="submitValue">Inserir valor</button>
+      <button type="submit" id="submitValue">Inserir valor</button>
     </form>
   );
 };
