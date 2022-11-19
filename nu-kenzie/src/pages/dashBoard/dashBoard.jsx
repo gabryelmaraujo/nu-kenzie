@@ -9,7 +9,7 @@ import ListsHeader from "../../components/ListsHeader"
 import HaveNoValues from "../../components/HaveNoValues"
 import FinanceList from "../../components/FinanceList"
 
-const DashBoardPage = ({listTransactions, setListTransactions, addFinance}) =>{
+const DashBoardPage = ({listTransactions, setListTransactions, addFinance, removeFinance, allMoney}) =>{
 
     const verifyListLength = () => {
         if(listTransactions.length === 0){
@@ -32,7 +32,7 @@ const DashBoardPage = ({listTransactions, setListTransactions, addFinance}) =>{
                             <AddValueForm listTransactions={listTransactions} setListTransactions={setListTransactions} addFinance={addFinance}/>
                         </div>
 
-                        <TotalMoney/>
+                        <TotalMoney allMoney={allMoney}/>
 
                     </section>
 
@@ -41,7 +41,7 @@ const DashBoardPage = ({listTransactions, setListTransactions, addFinance}) =>{
                         
                         {/* <HaveNoValues/> */}
                         
-                        <FinanceList listTransactions={listTransactions} setListTransactions={setListTransactions}/>
+                        <FinanceList listTransactions={listTransactions} setListTransactions={setListTransactions} removeFinance={removeFinance}/>
 
                     </section>
                 </div>
