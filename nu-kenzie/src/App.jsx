@@ -26,20 +26,24 @@ function removeFinance(financeDesc){
 function allMoney(){
   const entriesValue = []
   const exitsValue = []
-  listTransactions.map((finances) => {
-    if(finances.type === "entrada"){
-      entriesValue.push(finances.value)
-    }else{
-      exitsValue.push(finances.value)
-    }
-    })
 
-  const entriesSum = entriesValue.reduce( (accum, curr) => accum + curr )
-  const exitsSum = exitsValue.reduce( (accum, curr) => accum + curr )
+  if(listTransactions.length !== 0){
+    listTransactions.map((finances) => {
+      if(finances.type === "entrada"){
+        entriesValue.push(finances.value)
+      }else{
+        exitsValue.push(finances.value)
+      }
+      })
+  
+    const entriesSum = entriesValue.reduce( (accum, curr) => accum + curr )
+    const exitsSum = exitsValue.reduce( (accum, curr) => accum + curr )
+  
+    const balance = entriesSum-exitsSum
+  
+    return balance
+  }
 
-  const balance = entriesSum-exitsSum
-
-  return balance
 
 }
 
