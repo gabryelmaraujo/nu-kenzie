@@ -10,7 +10,8 @@ const AddValueForm = ({listTransactions, setListTransactions, addFinance}) => {
     id: "",
     description: "",
     value: "",
-    type: ""
+    type: "",
+    visible: true
   })
 
   const submitFinance = (event) => {
@@ -24,7 +25,8 @@ const AddValueForm = ({listTransactions, setListTransactions, addFinance}) => {
       id: `${newIdNum}`,
       description: "",
       type: "",
-      value: ""
+      value: "",
+      visible: true
     })
 
   }
