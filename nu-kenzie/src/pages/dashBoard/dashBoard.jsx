@@ -13,9 +13,9 @@ const DashBoardPage = ({listTransactions, setListTransactions, addFinance, remov
 
     const verifyListLength = () => {
         if(listTransactions.length === 0){
-            <HaveNoValues/>
+            return <HaveNoValues/>
         }else{
-            <FinanceList listTransactions={listTransactions} setListTransactions={setListTransactions}/>
+            return <FinanceList listTransactions={listTransactions} setListTransactions={setListTransactions}/>
         }
     }
 
@@ -32,16 +32,20 @@ const DashBoardPage = ({listTransactions, setListTransactions, addFinance, remov
                             <AddValueForm listTransactions={listTransactions} setListTransactions={setListTransactions} addFinance={addFinance}/>
                         </div>
 
-                        <TotalMoney allMoney={allMoney}/>
+                        { listTransactions.length !== 0 ? (<TotalMoney allMoney={allMoney}/>) : ("")}
 
                     </section>
 
                     <section className="dbListSec">
                         <ListsHeader/>
-                        
-                        {/* <HaveNoValues/> */}
-                        
-                        <FinanceList listTransactions={listTransactions} setListTransactions={setListTransactions} removeFinance={removeFinance}/>
+
+                        {
+                            listTransactions.length === 0 ? (
+                                <HaveNoValues/>
+                            ) : (
+                                <FinanceList listTransactions={listTransactions} setListTransactions={setListTransactions} removeFinance={removeFinance}/>
+                            )
+                        }
 
                     </section>
                 </div>
