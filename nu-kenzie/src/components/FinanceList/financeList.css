@@ -1,0 +1,23 @@
+.dbList{
+    max-height: 400px;
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+    padding: 0 6px;
+}
+
+.dbList::-webkit-scrollbar {
+    width: 2px;
+  }
+  
+.dbList::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0);
+  }
+  
+.dbList::-webkit-scrollbar-thumb {
+    background-color: rgba(128, 128, 128, 0.294);
+    border-radius: 20px;
+  }

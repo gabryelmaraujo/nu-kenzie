@@ -1,0 +1,16 @@
+.noValuesText{
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 34px;
+    color: #343A40;
+}
+
+@media (max-width: 700px){
+    .haveNoItemImg{
+        max-width: 100%;
+    }
+}
+
+.haveNoItemImg{
+    margin-bottom: 30px;
+}
