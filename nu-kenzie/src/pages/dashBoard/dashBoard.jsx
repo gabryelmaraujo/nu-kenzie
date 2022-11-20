@@ -11,14 +11,6 @@ import FinanceList from "../../components/FinanceList"
 
 const DashBoardPage = ({listTransactions, setListTransactions, addFinance, removeFinance, allMoney, setPage}) =>{
 
-    const verifyListLength = () => {
-        if(listTransactions.length === 0){
-            return <HaveNoValues/>
-        }else{
-            return <FinanceList listTransactions={listTransactions} setListTransactions={setListTransactions}/>
-        }
-    }
-
     return (
 
         <div className="dashBoardPage">
