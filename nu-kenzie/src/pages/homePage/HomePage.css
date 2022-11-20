@@ -10,10 +10,26 @@ button{
     cursor: pointer;
 }
 
+@media (max-width: 700px){
+    .hpContainer{
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .hpBannerSec{
+        display: none;
+    }
+
+}
+
 .homePageMain{
     background-color: #212529;
     width: 100vw;
     height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
 .hpContainer{
