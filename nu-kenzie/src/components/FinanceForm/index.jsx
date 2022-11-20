@@ -74,10 +74,10 @@ const AddValueForm = ({listTransactions, setListTransactions, addFinance}) => {
             onChange={(event)=>{
                 setFormData({...formData, type: event.target.value})
               }}
-            value={formData.type}
             required
+            defaultValue={"default"}
             >
-            <option value ="" disabled selected>Selecione o tipo</option>
+            <option value ="default" disabled>Selecione o tipo</option>
             <option value="entrada">Entrada</option>
             <option value="saida">Saída</option>
           </select>
