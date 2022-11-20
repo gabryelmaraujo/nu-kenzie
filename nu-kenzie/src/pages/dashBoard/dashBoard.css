@@ -16,6 +16,21 @@ label{
 }
 
 
+@media (max-width: 700px){
+
+    .dbMainContainer{
+        max-width: 100%;
+        margin: 38px auto;
+    
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+
 /* CONTAINER STYLES */
 .dbMainContainer{
     width: 61.438rem;
@@ -56,6 +71,12 @@ label{
 
 
 /* LIST STYLES */
+
+@media(max-width: 700px){
+    .dbListSec{
+        max-width: 100%;
+    }
+}
 
 .dbListSec{
     width: 560px;
