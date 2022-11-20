@@ -3,7 +3,12 @@ import React from "react";
 
 import "./listsHeader.css"
 
-const ListsHeader = () => {
+const ListsHeader = ({ listTransactions }) => {
+
+  const allFinances = listTransactions
+
+  console.log(allFinances)
+
   return (
     <div className="dbListHeader">
       <p className="dbListHeaderText">Resumo financeiro</p>
