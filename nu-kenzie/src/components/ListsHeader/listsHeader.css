@@ -32,3 +32,8 @@
 
     text-align: center;
 }
+
+.listButtons button:focus{
+    background-color: #FD377E;
+    color: white;
+}

@@ -13,9 +13,9 @@ return (
     <ul className="dbList">
         {
             listTransactions.map((finances, index) => {
-                if(finances.type === "entrada"){
+                if(finances.type === "entrada" && finances.visible === true){
                     return <EntryCard key={index} financeInfos={finances} removeFinance={removeFinance}/>
-                }else if(finances.type === "saida"){
+                }else if(finances.type === "saida" && finances.visible === true){
                     return <ExitCard key={index} financeInfos={finances} removeFinance={removeFinance}/>
                 }
             })

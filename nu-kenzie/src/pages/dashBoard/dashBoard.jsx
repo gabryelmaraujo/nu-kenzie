@@ -37,7 +37,7 @@ const DashBoardPage = ({listTransactions, setListTransactions, addFinance, remov
                     </section>
 
                     <section className="dbListSec">
-                        <ListsHeader listTransactions={listTransactions}/>
+                        <ListsHeader listTransactions={listTransactions} setListTransactions={setListTransactions}/>
 
                         {
                             listTransactions.length === 0 ? (
