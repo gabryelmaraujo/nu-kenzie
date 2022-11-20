@@ -1,6 +1,6 @@
 const financesData = [
-    // {id: 1, description: "Salário recebido", type: "entrada", value: 2500 },
-    // {id: 2, description: "Conta de luz", type: "saida", value: 150 },
+    {id: 1, description: "Salário recebido", type: "entrada", value: 2500 },
+    {id: 2, description: "Conta de luz", type: "saida", value: 150 },
   ]
 
 

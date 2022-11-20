@@ -22,10 +22,8 @@ function addFinance(financesData){
 
 function removeFinance(financeId){
   const newList = listTransactions.filter(finance => finance.id !== financeId)
-  
-  console.log(newList)
 
-  setListTransactions([newList])
+  setListTransactions(newList)
 }
 
 function allMoney(){
