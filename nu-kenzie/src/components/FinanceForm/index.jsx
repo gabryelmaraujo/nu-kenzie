@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { aleatoryId } from "../../data/financesData";
 
 import "./form.css"
 
@@ -6,6 +7,7 @@ import "./form.css"
 const AddValueForm = ({listTransactions, setListTransactions, addFinance}) => {
 
   const [formData, setFormData] = useState({
+    id: "",
     description: "",
     value: "",
     type: ""
@@ -13,12 +15,18 @@ const AddValueForm = ({listTransactions, setListTransactions, addFinance}) => {
 
   const submitFinance = (event) => {
     event.preventDefault()
+
+    const newIdNum = aleatoryId()
+
     addFinance(formData)
+
     setFormData({
+      id: `${newIdNum}`,
       description: "",
       type: "",
       value: ""
     })
+
   }
 
   return (

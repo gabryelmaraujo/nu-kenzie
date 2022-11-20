@@ -20,8 +20,11 @@ function addFinance(financesData){
   setListTransactions([...listTransactions, financesData])
 }
 
-function removeFinance(financeDesc){
-  const newList = listTransactions.filter(finance => finance.description !== financeDesc)
+function removeFinance(financeId){
+  const newList = listTransactions.filter(finance => finance.id !== financeId)
+  
+  console.log(newList)
+
   setListTransactions([newList])
 }
 
@@ -38,8 +41,8 @@ function allMoney(){
       }
       })
   
-    const entriesSum = entriesValue.reduce( (accum, curr) => accum + curr )
-    const exitsSum = exitsValue.reduce( (accum, curr) => accum + curr )
+    const entriesSum = entriesValue.reduce( (accum, curr) => accum + curr, 0 )
+    const exitsSum = exitsValue.reduce( (accum, curr) => accum + curr, 0 )
   
     const balance = entriesSum-exitsSum
   
