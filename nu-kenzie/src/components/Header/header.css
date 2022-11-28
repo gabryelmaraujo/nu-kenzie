@@ -14,14 +14,14 @@ label{
     display: block;
 }
 
-@media(max-width: 700px){
+@media(max-width: 1024px){
 
     .dbHeader{
         width: 100%;
     }
 
     .dbNav{
-        max-width: 100%;
+        max-width: 90%;
     }
 
 }
